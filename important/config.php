@@ -26,3 +26,4 @@ try {
 }
 
 # Klassen- und Funktionseinbindung
+require_once("classes/InformationClass.php");
