@@ -15,6 +15,18 @@ class InformationClass {
     // code...
   }
 
+  # Mehtode um alle Informationen aus der Datenbank zu bekommen
+  public static function getAllInformation() {
+
+    GLOBAL $db;
+
+    $stmt = $db->prepare("SELECT * FROM information");
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+
+  }
+
   # Methode um eine Information zu erstellen und in der Datenbank zu speichern.
   public function createInformation($newTitle, $newDescription, $newAuthor, $newPublshedAt, $newUpdatedAt) {
 
